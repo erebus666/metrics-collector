@@ -4,7 +4,10 @@
   "description": "Backend collector of client tracking data",
   "main": "server.js",
   "scripts": {},
-  "repository": "https://github.com/ibm-cds-labs/metrics-collector",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibm-cds-labs/metrics-collector"
+  },
   "keywords": [
     "tracking"
   ],
