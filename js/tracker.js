@@ -82,6 +82,8 @@ var _paq = _paq || [];
 var enableLinkTrackingForNode = function( node ){
   var _tracker = this;
   node.find('a,area').each(function(link){
-	  _tracker.addClickListener($(this)[0], true);
+      if ( _tracker.addClickListener) {
+          _tracker.addClickListener($(this)[0], true);
+      }
   });
 };
