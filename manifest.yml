@@ -4,13 +4,13 @@ declared-services:
     label: cloudantNoSQLDB
     plan: Shared
 applications:
-- name: metrics-collector
+- name: metrics-collector-loyalytics-1351
   memory: 256M
   instances: 1
-  domain: mybluemix.net
   random-route: true
   disk_quota: 1024M
   command: node server.js
   path: .
   services:
-  - metrics-collector-cloudant-service
+    - metrics-collector-cloudant-service
+  host: metrics-collector-loyalytics-1351
