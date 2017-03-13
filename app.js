@@ -99,7 +99,7 @@ function getCollection() {
 
 // Get or store a document in the collection
 function getClickstreamDocument(document) {
-	document.id = document.action_name + document.lyl_viewts + document.ip;
+	document.id = document.action_name + document.h + document.m + document.s + document.ip;
 	console.log(document.id);
 	let documentUrl = `${collectionUrl}/docs/${document.id}`;
 	console.log(`Getting document:\n${document.id}\n`);
@@ -127,7 +127,7 @@ getDatabase()
 		.then(() => getCollection())
 		.then(() => { exit(`Completed successfully`);})
 
-app.get("/tracker_db_new", function (req, res) {
+app.get("/tracker", function (req, res) {
 	//console.log(req.query);
 	// Get the json payload
 	var type = null;
@@ -224,7 +224,7 @@ app.get("/tracker_db_new", function (req, res) {
 		//Insert payload in db
 
 		getClickstreamDocument(jsonPayloadMod[i])
-			.then(() => { jsonPayloadMod = jsonPayloadMod.splice(jsonPayloadMod.indexOf(jsonPayloadMod[i], 1)); console.log('Completed Successfully'); res.send('Deon: Success');})
+			.then(() => { jsonPayloadMod = jsonPayloadMod.splice(jsonPayloadMod.indexOf(jsonPayloadMod[i], 1)); console.log('Completed Successfully'); res.send('Done: Success');})
 			.catch((error) => { /*exit(`Completed with error ${JSON.stringify(error)}`)*/ console.log('Completed with error' +  JSON.stringify(error)); res.send('Done: Error');});
 	}
 

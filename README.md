@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 # Simple Metrics Tutorial Part 1: Metrics Collection
@@ -68,3 +69,6 @@ When you're done, move on to [Part 2](https://developer.ibm.com/clouddataservice
 
 _<sup>© "Apache", "CouchDB", "Apache CouchDB" and the CouchDB logo are trademarks or registered trademarks of The Apache Software Foundation. All other brands and trademarks are the property of their respective owners.</sup>_
 
+=======
+# metrics-collector
+>>>>>>> a31f8b17c8c8e88d0160d7839ddf12f2d44a76ba
