@@ -18,7 +18,7 @@ var _ = require('lodash');
 //var cloudant = require('./lib/storage');
 //var misc = require('./lib/misc');
 
-var dbName = process.env.CLOUDANT_DB_NAME || "tracker_db_new";
+//var dbName = process.env.CLOUDANT_DB_NAME || "tracker_db_new";
 // References for Azure DocDB
 var DocumentDBClient = require('documentdb').DocumentClient;
 var docdbConfig = require('./lib/docdbConfig');
@@ -237,14 +237,14 @@ app.get("*", function (request, response) {
 });
 
 //If Cloud Foundry
-var port = process.env.VCAP_APP_PORT || 8085;
+var port = process.env.PORT || 8085;
 var connected = function () {
 	console.log("MEtrics Collector started on port %s : %s", port, Date(Date.now()));
 };
 
-if (process.env.VCAP_APP_HOST) {
-	http.createServer(app).listen(process.env.VCAP_APP_PORT,
-		process.env.VCAP_APP_HOST,
+if (process.env.HOST) {
+	http.createServer(app).listen(process.env.PORT,
+		process.env.HOST,
 		connected);
 } else {
 	http.createServer(app).listen(port, connected);
