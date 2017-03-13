@@ -1,0 +1,14 @@
+{
+  "ServiceId": "com.ibm.cloudoe.orion.client.deploy",
+  "Params": {
+    "Target": {
+      "Url": "https://api.ng.bluemix.net",
+      "Org": "mohit.jain@loyalytics.in",
+      "Space": "loyalytics"
+    },
+    "Name": "metrics-collector-loyalytics-1351",
+    "Instrumentation": {}
+  },
+  "Path": "manifest.yml",
+  "Type": "Cloud Foundry"
+}

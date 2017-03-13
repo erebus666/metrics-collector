@@ -1,0 +1,1 @@
+var ecommerce1 = {{ecommerce}};
